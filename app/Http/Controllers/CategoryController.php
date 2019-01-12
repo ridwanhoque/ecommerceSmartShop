@@ -49,6 +49,11 @@ class categoryController extends Controller
     
     
     public function manageCategory() {
-        return view("admin.category.manageCategoryContent");
+        $categories = Category::all();
+        
+        
+        
+        
+        return view("admin.category.manageCategoryContent",["categories"=>$categories]);
     }
 }

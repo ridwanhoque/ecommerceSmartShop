@@ -1,16 +1,25 @@
 @extends("admin.master")
 
 @section("mainContent")
-
+<div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header">Add Category</h2>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            
 <div class="row">
     
     {!! Form::open(['url'=>'/categorySave', 'method'=>'post']) !!}
 
     <hr>
     
+    
     <div class="panel panel-primary">
+        
         <div class="panel-heading">
-            <h2>Add Category</h2>
+            Category Add Form
         </div>
 
         <div class="panel-body">
