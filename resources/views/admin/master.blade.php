@@ -17,6 +17,12 @@
     <!-- MetisMenu CSS -->
     <link href="{{ asset('public/admin/vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
 
+     <!-- DataTables CSS -->
+    <link href="{{ asset('public/admin/vendor/datatables-plugins/dataTables.bootstrap.css') }}" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="{{ asset('public/admin/vendor/datatables-responsive/dataTables.responsive.css') }}" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link href="{{ asset('public/admin/dist/css/sb-admin-2.css') }}" rel="stylesheet">
 
@@ -64,6 +70,11 @@
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="{{ asset('public/admin/vendor/metisMenu/metisMenu.min.js') }}"></script>
+    
+    <!-- DataTables JavaScript -->
+    <script src="{{ asset('public/admin/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('public/admin/vendor/datatables-plugins/dataTables.bootstrap.min.js') }}"></script>
+    <script src="{{ asset('public/admin/vendor/datatables-responsive/dataTables.responsive.js') }}"></script>
 
     <!-- Morris Charts JavaScript -->
     <script src="{{ asset('public/admin/vendor/raphael/raphael.min.js') }}"></script>
@@ -72,6 +83,15 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('public/admin/dist/js/sb-admin-2.js') }}"></script>
+    
+     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>
 
 </body>
 

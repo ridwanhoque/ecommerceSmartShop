@@ -20,6 +20,12 @@ Route::get('/category/add','CategoryController@createCategory');
 Route::post('/categorySave/','CategoryController@storeCategory');
 Route::get('/category/manage','CategoryController@manageCategory');
 
+//manufacturer
+Route::get('/manufacturer/add','ManufacturerController@createManufacturer');
+Route::post('/manufacturerSave/','ManufacturerController@storeManufacturer');
+Route::get('/manufacturer/manage','ManufacturerController@manageManufacturer');
+
+
 /*
 Route::get('/test', function () {
     //return view('demo');
