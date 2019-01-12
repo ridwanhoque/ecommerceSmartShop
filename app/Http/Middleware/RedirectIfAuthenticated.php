@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace smart_shop\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

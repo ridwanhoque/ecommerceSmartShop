@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace smart_shop\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
+use smart_shop\Category;
 
 use DB;
 

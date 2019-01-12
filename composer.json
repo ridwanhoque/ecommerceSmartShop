@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "smart_shop\\": "app/"
         },
         "classmap": [
             "database/seeds",
