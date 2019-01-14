@@ -23,16 +23,22 @@
         </div>
 
         <div class="panel-body">
+            @if( Session::get('message'))
             <div class="alert alert-success">
                 {{ Session::get('message') }}
             </div>
+            @endif
+            
             <div class="form-group">
                 <label>Category Name</label>
                 <input class="form-control" type="text" name="category_name" placeholder="Enter Title" value="">
+                
+                <strong class="text-danger">{{ $errors->has('category_name') ? $errors->first('category_name'):'' }}</strong>
             </div>
             <div class="form-group">
                 <label>Category Description</label>
                 <textarea class="form-control" name="category_description" placeholder="Enter Description"></textarea>
+                <strong class="text-danger">{{ $errors->has('category_description') ? $errors->first('category_description'):'' }}</strong>
             </div>
             <div class="form-group">
                 <label>Publication Status</label>

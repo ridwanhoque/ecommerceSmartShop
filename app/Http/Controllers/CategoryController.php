@@ -16,6 +16,12 @@ class categoryController extends Controller
     }
     
     public function storeCategory(Request $request) {
+        
+        $this->validate($request, [
+            'category_name'=>'required',
+            'category_description'=>'required'
+        ]);
+        
         //<First way of data save>
         //return $request->all();
 //        $category = new Category();
@@ -55,5 +61,11 @@ class categoryController extends Controller
         
         
         return view("admin.category.manageCategoryContent",["categories"=>$categories]);
+    }
+    
+    public function editCategory($id){
+        $categoryById = Category::where('id',$id)->first();
+        
+        return view('admin.category.editCategoryContent',['categoryById'=>$categoryById]);
     }
 }

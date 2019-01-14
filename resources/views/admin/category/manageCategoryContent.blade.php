@@ -23,6 +23,7 @@
                                         <th>Category Name</th>
                                         <th>Category Description</th>
                                         <th>Publication Status</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -30,7 +31,15 @@
                                     <tr class="odd gradeX">
                                         <td>{{ $category->category_name }}</td>
                                         <td>{{ $category->category_description }}</td>
-                                        <td>{{ $category->publication_status }}</td>
+                                        <td>{{ $category->publication_status==1 ? 'Active':'Inactive' }}</td>
+                                        <td>
+                                            <a class="btn btn-success btn-xs" href="{{ url('/category/edit'.$category->id) }}">
+                                                <span class="fa fa-edit"></span>
+                                            </a>
+                                            <a class="btn btn-danger btn-xs">
+                                                <span class="fa fa-trash"></span>
+                                            </a>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

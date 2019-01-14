@@ -20,18 +20,22 @@
         </div>
 
         <div class="panel-body">
+            @if(Session::get("message"))
             <div class="alert alert-success">
                 {{ Session::get("message") }}
             </div>
+            @endif
             
             <div class="form-group">
                 <label class="">Manufacturer Name</label>
                 <input type="text" class="form-control" name="manufacturer_name" value="" placeholder="Enter Manufacturer">
+                <strong class="text-danger">{{ $errors->has('manufacturer_name') ? $errors->first('manufacturer_name'):'' }}</strong>
             </div>
 
             <div class="form-group">
                 <label class="">Manufacturer Description</label>
                 <textarea class="form-control" name="manufacturer_description" placeholder="Enter Manufacturer"></textarea>
+                <strong class="text-danger">{{ $errors->has('manufacturer_description') ? $errors->first('manufacturer_description'):'' }}</strong>
             </div>
 
 
