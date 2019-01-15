@@ -20,6 +20,8 @@ Route::get('/category/add','CategoryController@createCategory');
 Route::post('/categorySave/','CategoryController@storeCategory');
 Route::get('/category/manage','CategoryController@manageCategory');
 Route::get('/category/edit/{id}','CategoryController@editCategory');
+Route::post('/categoryUpdate/','CategoryController@updateCategory');
+Route::get('/category/delete/{id}','CategoryController@deleteCategory');
 
 //manufacturer
 Route::get('/manufacturer/add','ManufacturerController@createManufacturer');
@@ -27,6 +29,7 @@ Route::post('/manufacturerSave/','ManufacturerController@storeManufacturer');
 Route::get('/manufacturer/manage','ManufacturerController@manageManufacturer');
 Route::get('/manufacturer/edit/{id}','ManufacturerController@editManufacturer');
 Route::post('/manufacturerUpdate/','manufacturerController@updateManufacturer');
+Route::get('/manufacturer/delete/{id}','manufacturerController@deleteManufacturer');
 
 /*
 Route::get('/test', function () {

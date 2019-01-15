@@ -43,7 +43,7 @@
                                 <a class="btn btn-success btn-xs" href="{{ url("/manufacturer/edit/".$manufacturer->id) }}">
                                     <span class="fa fa-edit"></span>
                                 </a>
-                                <a class="btn btn-danger btn-xs" href="{{ url("/category/delete/") }}">
+                                <a class="btn btn-danger btn-xs" href="{{ url("/manufacturer/delete/".$manufacturer->id) }}" onclick="return confirmDelete()">
                                     <span class="fa fa-trash"></span>
                                 </a>
                             </td>
@@ -55,7 +55,6 @@
         </div>
     </div>
 </div>
-
 
 
 @endsection

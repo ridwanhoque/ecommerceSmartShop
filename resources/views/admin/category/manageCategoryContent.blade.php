@@ -11,6 +11,12 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
+                    @if(Session::get('message'))
+                    <div class="alert alert-success">
+                        {{ Session::get('message') }}
+                    </div>
+                    @endif
+                    
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             Categories Table
@@ -33,10 +39,10 @@
                                         <td>{{ $category->category_description }}</td>
                                         <td>{{ $category->publication_status==1 ? 'Active':'Inactive' }}</td>
                                         <td>
-                                            <a class="btn btn-success btn-xs" href="{{ url('/category/edit'.$category->id) }}">
+                                            <a class="btn btn-success btn-xs" href="{{ url('/category/edit/'.$category->id) }}">
                                                 <span class="fa fa-edit"></span>
                                             </a>
-                                            <a class="btn btn-danger btn-xs">
+                                            <a class="btn btn-danger btn-xs" href="{{ url('/category/delete/'.$category->id) }}" onclick="return confirmDelete()">
                                                 <span class="fa fa-trash"></span>
                                             </a>
                                         </td>

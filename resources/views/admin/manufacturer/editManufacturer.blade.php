@@ -22,12 +22,14 @@
                 <div class="form-group">
                     <label>Manufacturer Name</label>
                     <input name="manufacturer_name" class="form-control" value="{{ $manufacturerById->manufacturer_name }}" type="text" placeholder="Enter Manufacturer Name">
+                    <div class="text-danger">{{ $errors->has('manufacturer_name') ? $errors->first('manufacturer_name'):'' }}</div>
                 </div>
                 
                 <div class="form-group">
                     <label>Manufacturer Description</label>
                     <textarea class="form-control" placeholder="Enter Manufacturer Description" name="manufacturer_description">{{ $manufacturerById->manufacturer_description }}
                     </textarea>
+                    <div class="text-danger">{{ $errors->has('manufacturer_description') ? $errors->first('manufacturer_description'):'' }}</div>
                 </div>
                 
                 <div class="form-group">
