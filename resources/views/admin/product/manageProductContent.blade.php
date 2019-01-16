@@ -12,6 +12,12 @@
 
 <div class="row">
     <div class="col-lg-12">
+        @if(Session::get('message'))
+        <div class="alert alert-success">
+            {{ Session::get('message') }}
+        </div>
+        @endif
+        
         <div class="panel panel-primary">
             <div class="panel-heading">
                Products Table
@@ -43,7 +49,7 @@
                                     <span class="fa fa-edit" title="product edit"></span>
                                 </a>
                                 
-                                <a href="{{ url('/product/delete/'.$product->id) }}" class="btn btn-danger btn-xs">
+                                <a href="{{ url('/product/delete/'.$product->id) }}" class="btn btn-danger btn-xs" onclick="return confirmDelete()">
                                     <span class="fa fa-trash" title="product delete"></span>
                                 </a>
                                 

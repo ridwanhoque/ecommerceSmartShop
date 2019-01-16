@@ -15,7 +15,9 @@
             <div class="panel-heading">
                 Product Edit Form
             </div>
-            {!! Form::open(['url'=>'productUpdate/','method'=>'post','name'=>'productEditForm']) !!}
+            {!! Form::open(['url'=>'productUpdate/','method'=>'post','name'=>'productEditForm','enctype'=>'multipart/form-data']) !!}
+            <input type="hidden" name="id" value="{{ $productById->id }}">
+            
             <div class="panel-body">
                 <div class="foem-group">
                     <label>Product Name</label>
@@ -64,7 +66,7 @@
                 
                 <div class="form-group">
                     <label>Product Image</label>
-                    <input type="file" name="product_image" name="product_image" class="form-control">
+                    <input type="file" name="product_image" name="product_image" class="form-control" value="{{ $productById->product_image }}">
                 </div>
                 
                 <div class="form-group">

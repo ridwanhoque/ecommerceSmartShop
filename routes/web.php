@@ -38,6 +38,8 @@ Route::post('/productSave/','ProductController@storeProduct');
 Route::get('/product/manage/','ProductController@manageProduct');
 Route::get('/product/edit/{id}','ProductController@editProduct');
 Route::get('/product/view/{id}','ProductController@viewProduct');
+Route::post('/productUpdate/','ProductController@updateProduct');
+Route::get('/product/delete/{id}','ProductController@deleteProduct');
 
 /*
 Route::get('/test', function () {

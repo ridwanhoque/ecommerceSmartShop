@@ -46,12 +46,12 @@
                     
                     <tr>
                         <th>Product Short Description</th>
-                        <td>{{ $product->product_short_description }}</td>
+                        <td>{!! $product->product_short_description !!}</td>
                     </tr>
                     
                     <tr>
                         <th>Product Long Descrition</th>
-                        <td>{{ $product->product_long_description }}</td>
+                        <td>{!! $product->product_long_description !!}</td>
                     </tr>
                     
                     <tr>
