@@ -1,3 +1,4 @@
+
 	<div class="agileits-modal modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
 		aria-hidden="true">
 		<div class="modal-dialog">
@@ -115,9 +116,25 @@
 										<li class="has-children">
 											<a href="#">MOBILE PHONES</a>  
 											<ul class="is-hidden"> 
-												@foreach($activeCategories as $activeCategory)
-                                                                                                <li><a href="products.html">{{ $activeCategory->category_name }}</a></li>
-                                                                                                @endforeach
+												<li class="go-back"><a href="#">All Electronics</a></li> 
+												<li class="has-children">
+													<a href="#0">SmartPhones</a> 
+													<ul class="is-hidden"> 
+														<li class="go-back"><a href="#"> </a></li>
+														<li><a href="products.html">Android</a></li>
+														<li><a href="products.html">Windows</a></li>
+														<li><a href="products.html">Black berry</a></li>
+													</ul>
+												</li>
+                                                                                                <!--
+                                                                                                url::to()
+                                                                                                route()
+                                                                                                url()
+                                                                                                -->
+												<li> <a href="{{ url("/category") }}">IPhones</a> </li>
+												<li><a href="products.html">Tablets</a></li>
+												<li><a href="products.html">IPad</a></li>
+												<li><a href="products.html">Feature Phones</a></li> 
 											</ul>
 										</li> 
 										<li class="has-children">

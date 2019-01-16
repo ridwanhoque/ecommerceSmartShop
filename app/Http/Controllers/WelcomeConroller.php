@@ -3,6 +3,7 @@
 namespace smart_shop\Http\Controllers;
 
 use Illuminate\Http\Request;
+use smart_shop\Providers\AppServiceProvider;
 
 class WelcomeConroller extends Controller
 {
