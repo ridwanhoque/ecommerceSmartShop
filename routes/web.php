@@ -31,6 +31,14 @@ Route::get('/manufacturer/edit/{id}','ManufacturerController@editManufacturer');
 Route::post('/manufacturerUpdate/','manufacturerController@updateManufacturer');
 Route::get('/manufacturer/delete/{id}','manufacturerController@deleteManufacturer');
 
+
+//product
+Route::get('/product/add/','ProductController@createProduct');
+Route::post('/productSave/','ProductController@storeProduct');
+Route::get('/product/manage/','ProductController@manageProduct');
+Route::get('/product/edit/{id}','ProductController@editProduct');
+Route::get('/product/view/{id}','ProductController@viewProduct');
+
 /*
 Route::get('/test', function () {
     //return view('demo');

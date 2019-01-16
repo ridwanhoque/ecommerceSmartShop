@@ -40,10 +40,10 @@
                                         <td>{{ $category->publication_status==1 ? 'Active':'Inactive' }}</td>
                                         <td>
                                             <a class="btn btn-success btn-xs" href="{{ url('/category/edit/'.$category->id) }}">
-                                                <span class="fa fa-edit"></span>
+                                                <span class="fa fa-edit" title="category edit"></span>
                                             </a>
                                             <a class="btn btn-danger btn-xs" href="{{ url('/category/delete/'.$category->id) }}" onclick="return confirmDelete()">
-                                                <span class="fa fa-trash"></span>
+                                                <span class="fa fa-trash" title="category delete"></span>
                                             </a>
                                         </td>
                                     </tr>

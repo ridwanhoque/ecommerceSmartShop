@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>SB Admin 2 - Bootstrap Admin Theme</title>
+        <title>Ecommerce Website | Admin Panel</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="{{ asset('public/admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -39,6 +39,10 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        
+        <!-- tiny mce 
+        <script src="https://cloud.tinymce.com/5-testing/tinymce.min.js"></script>
+        <script>tinymce.init({ selector:'textarea' });</script>-->
     </head>
 
     <body>

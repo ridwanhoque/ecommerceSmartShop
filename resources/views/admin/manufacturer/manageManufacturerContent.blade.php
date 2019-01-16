@@ -24,7 +24,7 @@
             </div>
 
             <div class="panel-body">
-                <table class="table table-bordered table-striped table-hove" width="100%" id="dataTables-example">
+                <table class="table table-bordered table-striped table-hover" width="100%" id="dataTables-example">
                     <thead>
                         <tr>
                             <th>Manufacturer Name</th>
@@ -40,11 +40,11 @@
                             <td>{{ $manufacturer->manufacturer_description }}</td>
                             <td>{{ $manufacturer->publication_status==1 ? 'Active':'Inactive' }}</td>
                             <td>
-                                <a class="btn btn-success btn-xs" href="{{ url("/manufacturer/edit/".$manufacturer->id) }}">
-                                    <span class="fa fa-edit"></span>
+                                <a class="btn btn-success btn-xs" href="{{ url('/manufacturer/edit/'.$manufacturer->id) }}">
+                                    <span class="fa fa-edit"title="manufacturer edit"></span>
                                 </a>
-                                <a class="btn btn-danger btn-xs" href="{{ url("/manufacturer/delete/".$manufacturer->id) }}" onclick="return confirmDelete()">
-                                    <span class="fa fa-trash"></span>
+                                <a class="btn btn-danger btn-xs" href="{{ url('/manufacturer/delete/'.$manufacturer->id) }}" onclick="return confirmDelete()">
+                                    <span class="fa fa-trash" title="manufacturer delete"></span>
                                 </a>
                             </td>
                         </tr>

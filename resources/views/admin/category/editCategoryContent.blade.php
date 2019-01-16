@@ -27,7 +27,7 @@
                 <div class="form-group">
                     <label>Category Description</label>
                     <textarea name="category_description" class="form-control">{{ $categoryById->category_description }}</textarea>
-                    <div class="text-danger">{{ $error->has('category_description') ? $errors->first('category_description'):'' }}</div>
+                    <div class="text-danger">{{ $errors->has('category_description') ? $errors->first('category_description'):'' }}</div>
                 </div>
                 
                 <div class="form-group">

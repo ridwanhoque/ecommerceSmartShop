@@ -6,7 +6,14 @@
             <name>smart_shop</name>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>Actice</word>
+            <word>enctype</word>
+            <word>endforeach</word>
             <word>endsection</word>
+            <word>maufacturers</word>
+            <word>productEditForm</word>
+            <word>secttion</word>
+            <word>url</word>
             <word>yiels</word>
         </spellchecker-wordlist>
     </configuration>
