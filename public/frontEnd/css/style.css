@@ -256,7 +256,7 @@ ul.cd-dropdown-content li {
 /*-- header-three --*/ 
 .header-three {
     border-bottom: 1px solid #eaeaea; 
-    background: url(../{{ asset("public/frontEnd/images") }}bg.png)#08bce4 no-repeat;
+    background: url(../images/bg.png)#08bce4 no-repeat;
     background-size: cover;  
 }
 /*-- //header-three --*/

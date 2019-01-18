@@ -17,10 +17,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <!-- Custom Theme files -->
 <link href="{{ asset("public/frontEnd/css/bootstrap.css") }}" rel="stylesheet" type="text/css" media="all" />
 <link href="{{ asset("public/frontEnd/css/style.css") }}" rel="stylesheet" type="text/css" media="all" /> 
-<link href="{{ asset("public/frontEnd/css/menu.css") }}" rel="stylesheet" type="text/css" media="all" /> <!-- menu style --> 
-<link href="{{ asset("public/frontEnd/css/ken-burns.css") }}" rel="stylesheet" type="text/css" media="all" /> <!-- banner slider --> 
+<link href="{{ asset("public/frontEnd/css/menu.css") }}" rel="stylesheet" type="text/css" media="all" /> 
+<!-- banner slider --> 
 <link href="{{ asset("public/frontEnd/css/animate.min.css")}}" rel="stylesheet" type="text/css" media="all" /> 
-<link href="{{ asset("public/frontEnd/css/owl.carousel.css") }}" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->  
+<link href="{{ asset("public/frontEnd/css/owl.carousel.css") }}" rel="stylesheet" type="text/css" media="all"> 
+<!-- carousel slider -->  
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
 <link href="{{ asset("public/frontEnd/css/font-awesome.css") }}" rel="stylesheet"> 

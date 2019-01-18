@@ -70,6 +70,10 @@
                 </div>
                 
                 <div class="form-group">
+                    <img width="100" height="100" src="{{ url($productById->product_image) }}" alt="{{ $productById->product_name }}">
+                </div>
+                
+                <div class="form-group">
                     <label>Publication Status</label>
                     <select name="publication_status" class="form-control">
                         <option value="1">Active</option>

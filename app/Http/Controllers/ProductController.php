@@ -7,6 +7,7 @@ use smart_shop\Category;
 use smart_shop\Manufacturer;
 use smart_shop\Product;
 use DB;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller {
 
@@ -35,7 +36,7 @@ class ProductController extends Controller {
 
 
 
-        $this->save_product_info($request, $image_url);
+        $this->save_product_info($request, $getImageUrl);
 
         return redirect('/product/add/')->with('message', 'Product Add Success!');
     }
@@ -111,6 +112,7 @@ class ProductController extends Controller {
             $product->product_image = $image_url;
 
             $product->product_image = $image_url;
+            
         }
 
         $product->product_name = $request->product_name;
