@@ -86,5 +86,9 @@ Route::group(['middleware'=>'authuser'], function(){
     Route::get('/user/add/','UserController@createUser');
     Route::get('/user/manage/','UserController@manageUser');
     Route::post('/userSave/','UserController@storeUser');
+    Route::get('/user/edit/{id}','UserController@editUser');
+    Route::post('/userUpdate/','UserController@updateUser');
+    Route::get('/user/delete/{id}','UserController@deleteUser');
+    
     
 });

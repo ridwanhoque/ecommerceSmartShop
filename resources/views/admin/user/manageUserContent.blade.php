@@ -46,10 +46,10 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->address }}</td>
                             <td>
-                                <a href="" class="btn btn-success btn-xs">
+                                <a href="{{ url('/user/edit/'.$user->id) }}" class="btn btn-success btn-xs">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="" class="btn btn-danger btn-xs">
+                                <a href="{{ url('/user/delete/'.$user->id) }}" class="btn btn-danger btn-xs" onclick="return confirmDelete()">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>
