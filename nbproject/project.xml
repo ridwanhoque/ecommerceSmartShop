@@ -7,10 +7,12 @@
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>Actice</word>
+            <word>activeProductByCategory</word>
             <word>enctype</word>
             <word>endforeach</word>
             <word>endif</word>
             <word>endsection</word>
+            <word>mainContent</word>
             <word>maufacturers</word>
             <word>productEditForm</word>
             <word>secttion</word>

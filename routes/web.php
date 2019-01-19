@@ -11,35 +11,10 @@
 |
 */
 Route::get('/','WelcomeConroller@index');
-Route::get('/category','WelcomeConroller@category');
-Route::get('/single','WelcomeConroller@single');
+Route::get('/categoryView/{id}','WelcomeConroller@category');
+Route::get('/single/{id}','WelcomeConroller@single');
 Route::get('/contact','WelcomeConroller@contact');
 
-//category
-Route::get('/category/add','CategoryController@createCategory');
-Route::post('/categorySave/','CategoryController@storeCategory');
-Route::get('/category/manage','CategoryController@manageCategory');
-Route::get('/category/edit/{id}','CategoryController@editCategory');
-Route::post('/categoryUpdate/','CategoryController@updateCategory');
-Route::get('/category/delete/{id}','CategoryController@deleteCategory');
-
-//manufacturer
-Route::get('/manufacturer/add','ManufacturerController@createManufacturer');
-Route::post('/manufacturerSave/','ManufacturerController@storeManufacturer');
-Route::get('/manufacturer/manage','ManufacturerController@manageManufacturer');
-Route::get('/manufacturer/edit/{id}','ManufacturerController@editManufacturer');
-Route::post('/manufacturerUpdate/','manufacturerController@updateManufacturer');
-Route::get('/manufacturer/delete/{id}','manufacturerController@deleteManufacturer');
-
-
-//product
-Route::get('/product/add/','ProductController@createProduct');
-Route::post('/productSave/','ProductController@storeProduct');
-Route::get('/product/manage/','ProductController@manageProduct');
-Route::get('/product/edit/{id}','ProductController@editProduct');
-Route::get('/product/view/{id}','ProductController@viewProduct');
-Route::post('/productUpdate/','ProductController@updateProduct');
-Route::get('/product/delete/{id}','ProductController@deleteProduct');
 
 /*
 Route::get('/test', function () {
@@ -77,4 +52,39 @@ Route::get('/test', function () {
 //});
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('home');
+Route::group(['middleware'=>'authuser'], function(){
+
+    Route::get('/dashboard', 'HomeController@index')->name('home');
+
+    //category
+    Route::get('/category/add','CategoryController@createCategory')->middleware('authuser');
+    Route::post('/categorySave/','CategoryController@storeCategory');
+    Route::get('/category/manage','CategoryController@manageCategory');
+    Route::get('/category/edit/{id}','CategoryController@editCategory');
+    Route::post('/categoryUpdate/','CategoryController@updateCategory');
+    Route::get('/category/delete/{id}','CategoryController@deleteCategory');
+
+    //manufacturer
+    Route::get('/manufacturer/add','ManufacturerController@createManufacturer');
+    Route::post('/manufacturerSave/','ManufacturerController@storeManufacturer');
+    Route::get('/manufacturer/manage','ManufacturerController@manageManufacturer');
+    Route::get('/manufacturer/edit/{id}','ManufacturerController@editManufacturer');
+    Route::post('/manufacturerUpdate/','manufacturerController@updateManufacturer');
+    Route::get('/manufacturer/delete/{id}','manufacturerController@deleteManufacturer');
+
+
+    //product
+    Route::get('/product/add/','ProductController@createProduct');
+    Route::post('/productSave/','ProductController@storeProduct');
+    Route::get('/product/manage/','ProductController@manageProduct');
+    Route::get('/product/edit/{id}','ProductController@editProduct');
+    Route::get('/product/view/{id}','ProductController@viewProduct');
+    Route::post('/productUpdate/','ProductController@updateProduct');
+    Route::get('/product/delete/{id}','ProductController@deleteProduct');
+    
+    //user
+    Route::get('/user/add/','UserController@createUser');
+    Route::get('/user/manage/','UserController@manageUser');
+    Route::post('/userSave/','UserController@storeUser');
+    
+});

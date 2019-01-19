@@ -4,6 +4,7 @@ namespace smart_shop\Http\Controllers;
 
 use Illuminate\Http\Request;
 use smart_shop\Providers\AppServiceProvider;
+use smart_shop\Product;
 
 class WelcomeConroller extends Controller
 {
@@ -30,20 +31,29 @@ class WelcomeConroller extends Controller
     //return view("demo", ['data'=>$data]);  
     //return view("demo")->with('data',$data);  
     
-         return view('frontEnd.home.homeContent');
+        
+        
+        
+        $activeProducts = Product::where('publication_status',1)->get();
+         return view('frontEnd.home.homeContent',['activeProducts'=>$activeProducts]);
          
     }
     
-    public function category() {
-        return view('frontEnd.category.categoryContent');
+    public function category($id) {
+        $activeProductsByCategory = Product::where('category_id',$id)
+                ->where('publication_status',1)
+                ->get();
+        
+        return view('frontEnd.category.categoryContent',['activeProductsByCategory'=>$activeProductsByCategory]);
     }
     
     public function contact() {
         return view('frontEnd.contact.contactContent');
     }
     
-    public function single() {
-        return view('frontEnd.single.singleContent');
+    public function single($id) {
+        $singleProduct = Product::where('id',$id)->first();
+        return view('frontEnd.single.singleContent',['singleProduct'=>$singleProduct]);
     }
     
     

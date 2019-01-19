@@ -80,146 +80,26 @@ Home
 						<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 							<div class="tabcontent-grids">  
 								<div id="owl-demo" class="owl-carousel"> 
+                                                                    @foreach($activeProducts as $activeProduct)
 									<div class="item">
 										<div class="glry-w3agile-grids agileits"> 
-											<a href="products.html"><img src="{{ asset("public/frontEnd/images/e1.png") }}" alt="img"></a>
+                                                                                    <a href="products.html"><img width="200" height="200" src="{{ asset($activeProduct->product_image) }}" alt="img"></a>
 											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html">Audio speaker</a></h4>
-												<p>Lorem ipsum dolor sit amet consectetur</p>
-												<h5>$100</h5> 
+												<h4><a href="{{ url('/single/'.$activeProduct->id) }}">{{ $activeProduct->product_name }}</a></h4>
+												<p>{!! $activeProduct->product_short_description !!}</p>
+												<h5>BDT {{ $activeProduct->product_price }}</h5> 
 												<form action="#" method="post">
 													<input type="hidden" name="cmd" value="_cart" />
 													<input type="hidden" name="add" value="1" /> 
 													<input type="hidden" name="w3ls_item" value="Audio speaker" /> 
-													<input type="hidden" name="amount" value="100.00" /> 
+													<input type="hidden" name="amount" value="{{ $activeProduct->product_price }}" /> 
 													<button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
 												</form>  
 											</div>   
 										</div>   
 									</div>
-									<div class="item">
-										<div class="glry-w3agile-grids agileits">
-											<div class="new-tag"><h6>Sale</h6></div>
-											<a href="products.html"><img src="{{ asset("public/frontEnd/images/e2.png") }}" alt="img"></a>
-											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html">Refrigerator</a></h4>
-												<p>Lorem ipsum dolor sit amet consectetur</p> 
-												<h5>$300</h5>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" /> 
-													<input type="hidden" name="w3ls_item" value="Refrigerator" /> 
-													<input type="hidden" name="amount" value="300.00"/> 
-													<button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-												</form>
-											</div>       
-										</div>  
-									</div>
-									<div class="item">
-										<div class="glry-w3agile-grids agileits"> 
-											<div class="new-tag"><h6>New</h6></div>
-											<a href="products.html"><img src="{{ asset("public/frontEnd/images/e3.png") }}" alt="img"></a>
-											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html">Smart Phone</a></h4>
-												<p>Lorem ipsum dolor sit amet consectetur</p>
-												<h5>$70</h5>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" /> 
-													<input type="hidden" name="w3ls_item" value="Smart Phone" /> 
-													<input type="hidden" name="amount" value="70.00"/> 
-													<button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-												</form>
-											</div>        
-										</div>  
-									</div>
-									<div class="item">
-										<div class="glry-w3agile-grids agileits"> 
-											<a href="products.html"><img src="{{ asset("public/frontEnd/images/e4.png") }}" alt="img"></a>
-											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html">Digital Camera</a></h4>
-												<p>Lorem ipsum dolor sit amet consectetur</p>
-												<h5>$80</h5>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" /> 
-													<input type="hidden" name="w3ls_item" value="Digital Camera"/> 
-													<input type="hidden" name="amount" value="80.00"/>  
-													<button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-												</form>
-											</div>         
-										</div>  
-									</div>
-									<div class="item">
-										<div class="glry-w3agile-grids agileits"> 
-											<a href="products.html"><img src="{{ asset("public/frontEnd/images/e1.png") }}" alt="img"></a>
-											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html">Audio speaker</a></h4>
-												<p>Lorem ipsum dolor sit amet consectetur</p>
-												<h5>$100</h5> 
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" /> 
-													<input type="hidden" name="w3ls_item" value="Audio speaker" /> 
-													<input type="hidden" name="amount" value="100.00" /> 
-													<button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-												</form>  
-											</div>   
-										</div>   
-									</div>
-									<div class="item">
-										<div class="glry-w3agile-grids agileits">
-											<div class="new-tag"><h6>Sale</h6></div>
-											<a href="products.html"><img src="{{ asset("public/frontEnd/images/e2.png") }}" alt="img"></a>
-											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html">Refrigerator</a></h4>
-												<p>Lorem ipsum dolor sit amet consectetur</p> 
-												<h5>$300</h5>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" /> 
-													<input type="hidden" name="w3ls_item" value="Refrigerator" /> 
-													<input type="hidden" name="amount" value="300.00"/>  
-													<button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-												</form>
-											</div>       
-										</div>  
-									</div>
-									<div class="item">
-										<div class="glry-w3agile-grids agileits"> 
-											<div class="new-tag"><h6>New</h6></div>
-											<a href="products.html"><img src="{{ asset("public/frontEnd/images/e3.png") }}" alt="img"></a>
-											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html">Smart Phone</a></h4>
-												<p>Lorem ipsum dolor sit amet consectetur</p>
-												<h5>$70</h5>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" /> 
-													<input type="hidden" name="w3ls_item" value="Smart Phone" /> 
-													<input type="hidden" name="amount" value="70.00"/>
-													<button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-												</form>
-											</div>        
-										</div>  
-									</div>
-									<div class="item">
-										<div class="glry-w3agile-grids agileits"> 
-											<a href="products.html"><img src="{{ asset("public/frontEnd/images/e4.png") }}" alt="img"></a>
-											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html">Digital Camera</a></h4>
-												<p>Lorem ipsum dolor sit amet consectetur</p>
-												<h5>$80</h5>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" /> 
-													<input type="hidden" name="w3ls_item" value="Digital Camera"/> 
-													<input type="hidden" name="amount" value="80.00"/> 
-													<button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-												</form>
-											</div>         
-										</div>  
-									</div>
+                                                                    @endforeach()
+									
 								</div> 
 							</div>
 						</div>

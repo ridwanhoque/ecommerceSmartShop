@@ -110,9 +110,7 @@ class ProductController extends Controller {
             $product_image = $request->file('product_image');
             $image_url = $this->getImageUrl($product_image);
             $product->product_image = $image_url;
-
-            $product->product_image = $image_url;
-            
+         
         }
 
         $product->product_name = $request->product_name;

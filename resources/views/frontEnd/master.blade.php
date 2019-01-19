@@ -119,7 +119,6 @@ $(document).ready(function() {
 <body>
     
         @include("frontEnd.includes.header")
-        @include("frontEnd.includes.banner")
         @yield("mainContent")
         @include("frontEnd.includes.footer")
 	

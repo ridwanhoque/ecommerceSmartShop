@@ -116,7 +116,7 @@
 											<a href="#">MOBILE PHONES</a>  
 											<ul class="is-hidden"> 
 												@foreach($activeCategories as $activeCategory)
-                                                                                                <li><a href="products.html">{{ $activeCategory->category_name }}</a></li>
+                                                                                                <li><a href="{{ url('/categoryView/'.$activeCategory->id) }}">{{ $activeCategory->c.$activeCategory->idategory_name }}</a></li>
                                                                                                 @endforeach
 											</ul>
 										</li> 

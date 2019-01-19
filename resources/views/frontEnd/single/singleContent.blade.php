@@ -13,14 +13,14 @@ Single
 					<div class="col-md-6 single-top-left">	
 						<div class="flexslider">
 							<ul class="slides">
-								<li data-thumb="{{ asset("public/frontEnd/images/s1.jpg") }}">
-									<div class="thumb-image detail_images"> <img src="{{ asset("public/frontEnd/images/s1.jpg") }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+								<li data-thumb="{{ asset($singleProduct->product_image) }}">
+									<div class="thumb-image detail_images"> <img src="{{ asset($singleProduct->product_image) }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
 								</li>
-								<li data-thumb="{{ asset("public/frontEnd/images/s2.jpg") }}">
-									 <div class="thumb-image"> <img src="{{ asset("public/frontEnd/images/s2.jpg") }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+								<li data-thumb="{{ asset($singleProduct->product_image) }}">
+									 <div class="thumb-image"> <img src="{{ asset($singleProduct->product_image) }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
 								</li>
-								<li data-thumb="{{ asset("public/frontEnd/images/s3.jpg") }}">
-								   <div class="thumb-image"> <img src="{{ asset("public/frontEnd/images/s3.jpg") }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+								<li data-thumb="{{ asset($singleProduct->product_image) }}">
+								   <div class="thumb-image"> <img src="{{ asset($singleProduct->product_image) }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
 								</li> 
 							</ul>
 						</div>
