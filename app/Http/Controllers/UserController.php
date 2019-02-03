@@ -47,10 +47,8 @@ class UserController extends Controller {
 
         $user->name = $request->name;
         $user->address = $request->address;
-        $user->email = $request->email;
-
         $user->save();
-
+//Session::put('userid',$userid);
         return redirect('/user/manage/')->with('message', 'User Update Success!');
     }
     

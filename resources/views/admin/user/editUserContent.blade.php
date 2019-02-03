@@ -31,12 +31,7 @@
                 
                 <div class="form-group">
                     <label>User Email</label>
-                    <input type="email" name="email" value="{{ $userById->email }}" class="form-control"> 
-                </div>
-                
-                <div class="form-group">
-                    <label>User Password</label>
-                    <input type="password" name="password" value="{{ $userById->password }}" class="form-control">
+                    <input type="email" name="email" readonly="readonly" value="{{ $userById->email }}" class="form-control"> 
                 </div>
                 
                 <div class="form-group">

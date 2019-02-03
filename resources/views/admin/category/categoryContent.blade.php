@@ -38,6 +38,9 @@
             <div class="form-group">
                 <label>Category Description</label>
                 <textarea class="form-control" name="category_description" placeholder="Enter Description"></textarea>
+                <script>
+                        CKEDITOR.replace( 'category_description' );
+                </script>
                 <strong class="text-danger">{{ $errors->has('category_description') ? $errors->first('category_description'):'' }}</strong>
             </div>
             <div class="form-group">
